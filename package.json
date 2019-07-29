@@ -1,0 +1,40 @@
+{
+  "name": "neo4j-experiments",
+  "version": "1.0.0",
+  "description": "Experiments with Neo4j Graph Database and JS driver",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint .",
+    "lint-staged": "lint-staged",
+    "test": "jest --passWithNoTests --watch"
+  },
+  "keywords": [
+    "neo4j",
+    "js-driver",
+    "graphs"
+  ],
+  "author": "Vasily Belolapotkov <belolapotkov.v@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.1",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "git aa",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
