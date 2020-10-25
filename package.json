@@ -36,5 +36,9 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "neo4j-driver": "^1.7.5"
   }
 }
